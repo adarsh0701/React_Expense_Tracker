@@ -9,22 +9,22 @@ function Orb() {
             transform: translate(0, 0);
         }
         50%{
-            transform: translate(${width}px, ${height}px);
+            transform: translate(${width / 1.2}px, ${height / 2}px);
         }
         100%{
             transform: translate(0, 0);
         }
     `;
   const OrbStyled = styled.div`
-    width: ${width / 3}px;
-    height: ${height / 3}px;
+    width: 70vh;
+    height: 70vh;
     position: absolute;
     border-radius: 50%;
     margin-left: -37vh;
     margin-top: -37vh;
     background: linear-gradient(180deg, #f96692 0%, #f2994a 100%);
-    filter: blur();
-    animation: ${moveOrb} 1s alternate linear infinite;
+    filter: blur(100px);
+    animation: ${moveOrb} 15s alternate linear infinite;
   `;
 
   return <OrbStyled></OrbStyled>;
