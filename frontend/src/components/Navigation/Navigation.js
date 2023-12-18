@@ -16,7 +16,11 @@ function Navigation({ active, setActive }) {
       <ul className="menu-items">
         {menuItems.map((item) => {
           return (
-            <li key={item.id} onClick={() => setActive(item.id)}>
+            <li
+              key={item.id}
+              onClick={() => setActive(item.id)}
+              className={active === item.id ? 'active' : ''}
+            >
               {item.icon}
 
               <span>{item.title}</span>
@@ -34,7 +38,7 @@ const NavStyled = styled.nav`
   padding: 2rem 1.5rem;
   width: 374px;
   height: 100%;
-  background: rgba(252, 246, 249, 0.78);
+  background: rgba(254, 253, 205, 0.3);
   border: 3px solid #ffffff;
   backdrop-filter: blur(4.5px);
   border-radius: 32px;

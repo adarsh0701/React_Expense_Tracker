@@ -22,7 +22,11 @@ function Orb() {
     border-radius: 50%;
     margin-left: -37vh;
     margin-top: -37vh;
-    background: linear-gradient(180deg, #f96692 0%, #f2994a 100%);
+    background: linear-gradient(
+      109.6deg,
+      rgba(254, 253, 205, 1) 11.2%,
+      rgba(163, 230, 255, 1) 91.1%
+    );
     filter: blur(100px);
     animation: ${moveOrb} 15s alternate linear infinite;
   `;
