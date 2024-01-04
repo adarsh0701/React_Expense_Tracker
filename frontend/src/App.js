@@ -4,13 +4,27 @@ import { MainLayout } from './styles/Layouts';
 import Orb from './Components/Orb/orb';
 import Navigation from './Components/Navigation/Navigation';
 import { useMemo, useState } from 'react';
+import Dashboard from './Components/Dashboard/Dashboard';
+import Income from './Components/Incomes/Income';
+import Expenses from './Components/Expenses/Expenses';
+import { useGlobalContext } from './context/GlobalContext';
 function App() {
   const [active, setActive] = useState(1);
-
+  const global = useGlobalContext();
+  console.log(global);
   const dispalyData = () => {
     switch (active) {
       case 1:
-      //  return <Dashboard />;
+        return <Dashboard />;
+      case 2:
+        return <Dashboard />;
+      case 3:
+        return <Income />;
+      case 4:
+        return <Expenses />;
+
+      default:
+        return <Dashboard />;
     }
   };
   const orbMemo = useMemo(() => {
