@@ -17,7 +17,7 @@ export const GlobalProvider = ({ children }) => {
       });
   };
   return (
-    <GlobalContext.Provider value={'hello'}>
+    <GlobalContext.Provider value={{ addIncome }}>
       {children}
     </GlobalContext.Provider>
   );
