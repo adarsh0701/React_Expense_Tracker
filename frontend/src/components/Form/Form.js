@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { useGlobalContext } from '../../context/GlobalContext';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Button from '../Button/Button';
 
 export default function Form() {
   const { addIncome, getIncomes, error, setError } =
@@ -92,16 +93,16 @@ export default function Form() {
           onChange={handleInput('description')}
         ></textarea>
       </div>
-      {/* <div className="submit-btn">
-                <Button 
-                    name={'Add Income'}
-                    icon={plus}
-                    bPad={'.8rem 1.6rem'}
-                    bRad={'30px'}
-                    bg={'var(--color-accent'}
-                    color={'#fff'}
-                />
-            </div> */}
+      <div className="submit-btn">
+        <Button
+          name={'Add Income'}
+          icon={plus}
+          bPad={'.8rem 1.6rem'}
+          bRad={'30px'}
+          bg={'var(--color-accent'}
+          color={'#fff'}
+        />
+      </div>
     </FormStyled>
   );
 }
