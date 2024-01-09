@@ -4,7 +4,7 @@ import { useGlobalContext } from '../../context/GlobalContext';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Button from '../Button/Button';
-
+import { plus } from '../../utils/icons';
 export default function Form() {
   const { addIncome, getIncomes, error, setError } =
     useGlobalContext();

@@ -16,8 +16,17 @@ export const GlobalProvider = ({ children }) => {
         setError(err.response.data.message);
       });
   };
+  const getIncomes = async () => {
+    const response = await axios.get(
+      `${BASE_URL}get-incomes`,
+      incomes
+    );
+    setIncomes(response.data);
+  };
   return (
-    <GlobalContext.Provider value={{ addIncome }}>
+    <GlobalContext.Provider
+      value={{ addIncome, getIncomes, incomes }}
+    >
       {children}
     </GlobalContext.Provider>
   );
