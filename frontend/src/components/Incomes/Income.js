@@ -48,4 +48,14 @@ export default function Income() {
   );
 }
 
-const IncomeStyled = styled.div``;
+const IncomeStyled = styled.div`
+  display: flex;
+  overflow: auto;
+  .income-content {
+    display: flex;
+    gap: 2rem;
+    .incomes {
+      flex: 1;
+    }
+  }
+`;

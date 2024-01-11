@@ -35,7 +35,7 @@ export default function IncomeItem({
   type,
 }) {
   return (
-    <IncomeItemStyled>
+    <IncomeItemStyled indicator={indicatorColor}>
       <div className="icon"></div>
       <div className="content">
         <h5>{title}</h5>
