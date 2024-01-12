@@ -14,8 +14,10 @@ export default function Income() {
     <IncomeStyled>
       <InnerLayout>
         <h1>Incomes</h1>
-
         <div className="income-content">
+          <div className="form-container">
+            <Form />
+          </div>
           <div className="form-container"></div>
           <div className="incomes">
             {incomes.map((income) => {
@@ -40,7 +42,6 @@ export default function Income() {
                 />
               );
             })}
-            <Form></Form>
           </div>
         </div>
       </InnerLayout>

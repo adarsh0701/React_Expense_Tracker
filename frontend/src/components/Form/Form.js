@@ -46,14 +46,14 @@ export default function Form() {
           value={amount}
           type="text"
           name={'amount'}
-          placeholder="Salary Amount"
+          placeholder={'Salary Amount'}
           onChange={handleInput('amount')}
         />
       </div>
       <div className="input-control">
         <DatePicker
           id="date"
-          placeholderText="Enter a Date"
+          placeholderText="Enter A Date"
           selected={date}
           dateFormat="dd/MM/yyyy"
           onChange={(date) => {
