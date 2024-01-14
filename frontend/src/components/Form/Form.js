@@ -6,8 +6,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Button from '../Button/Button';
 import { plus } from '../../utils/icons';
 export default function Form() {
-  const { addIncome, getIncomes, error, setError } =
-    useGlobalContext();
+  const { addIncome, getIncomes } = useGlobalContext();
   const [inputState, setInputState] = useState({
     title: '',
     amount: '',
@@ -23,13 +22,6 @@ export default function Form() {
     e.preventDefault();
     addIncome(inputState);
     getIncomes();
-    setInputState({
-      title: '',
-      amount: '',
-      date: '',
-      category: '',
-      description: '',
-    });
   };
   return (
     <FormStyled onSubmit={handleSubmit}>
