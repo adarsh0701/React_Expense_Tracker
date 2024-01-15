@@ -4,12 +4,14 @@ import { InnerLayout } from '../../styles/Layouts';
 import { useGlobalContext } from '../../context/GlobalContext';
 import Form from '../Form/Form';
 import IncomeItem from '../IncomeItem/IncomeItem';
+import { de } from 'date-fns/locale';
 
 export default function Income() {
-  const { addIncome, incomes, getIncomes } = useGlobalContext();
+  const { addIncome, incomes, getIncomes, deleteIncome } =
+    useGlobalContext();
   useEffect(() => {
     getIncomes();
-  }, []);
+  }, [incomes]);
   return (
     <IncomeStyled>
       <InnerLayout>
@@ -39,6 +41,7 @@ export default function Income() {
                   date={date}
                   category={category}
                   indicatorColor="var(--color-green)"
+                  deleteItem={deleteIncome}
                 />
               );
             })}
