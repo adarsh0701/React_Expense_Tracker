@@ -11,7 +11,7 @@ export default function Income() {
     useGlobalContext();
   useEffect(() => {
     getIncomes();
-  }, [incomes]);
+  }, []);
   return (
     <IncomeStyled>
       <InnerLayout>

@@ -21,7 +21,7 @@ import {
   users,
   yt,
 } from '../../utils/icons';
-//import { dateFormat } from '../../utils/';
+import { dateFormat } from '../../utils/dateFormat';
 import Button from '../Button/Button';
 export default function IncomeItem({
   id,
@@ -89,6 +89,9 @@ export default function IncomeItem({
           <div className="text">
             <p>
               {dollar} {amount}
+            </p>
+            <p>
+              {calender} {dateFormat(date)}
             </p>
 
             <p>
