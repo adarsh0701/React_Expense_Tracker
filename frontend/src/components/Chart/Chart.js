@@ -42,6 +42,7 @@ export default function Chart() {
           }),
         ],
         backgroundColor: 'green',
+        tension: 0.2,
       },
       {
         label: 'Expenses',
