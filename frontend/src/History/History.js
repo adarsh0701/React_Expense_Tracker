@@ -8,34 +8,32 @@ export default function History() {
   const [...history] = transactionHistory();
   return (
     <HistoryStyled>
-      <h2>
-        Recent History
-        {history.map((item) => {
-          const { _id, title, amount, type } = item;
-          return (
-            <div className="history-item">
-              <p
-                style={{
-                  color:
-                    type === 'expense' ? 'red' : 'var(--color-green)',
-                }}
-              >
-                {title}
-              </p>
-              <p
-                style={{
-                  color:
-                    type === 'expense' ? 'red' : 'var(--color-green)',
-                }}
-              >
-                {type === 'expense'
-                  ? `-${amount <= 0 ? 0 : amount}`
-                  : `+${amount <= 0 ? 0 : amount}`}
-              </p>
-            </div>
-          );
-        })}
-      </h2>
+      <h2>Recent History</h2>
+      {history.map((item) => {
+        const { _id, title, amount, type } = item;
+        return (
+          <div className="history-item">
+            <p
+              style={{
+                color:
+                  type === 'expense' ? 'red' : 'var(--color-green)',
+              }}
+            >
+              {title}
+            </p>
+            <p
+              style={{
+                color:
+                  type === 'expense' ? 'red' : 'var(--color-green)',
+              }}
+            >
+              {type === 'expense'
+                ? `-${amount <= 0 ? 0 : amount}`
+                : `+${amount <= 0 ? 0 : amount}`}
+            </p>
+          </div>
+        );
+      })}
     </HistoryStyled>
   );
 }
