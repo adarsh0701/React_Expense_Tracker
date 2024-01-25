@@ -18,6 +18,7 @@ export default function Form() {
   const { title, amount, date, category, description } = inputState;
   const handleInput = (name) => (e) => {
     setInputState({ ...inputState, [name]: e.target.value });
+    setError('');
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +35,7 @@ export default function Form() {
   return (
     <FormStyled onSubmit={handleSubmit}>
       <div className="input-control">
+        {error && <p className="error">{error}</p>}
         <input
           type="text"
           value={title}

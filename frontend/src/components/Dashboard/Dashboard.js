@@ -31,13 +31,13 @@ function Dashboard() {
             <Chart />
             <div className="amount-con">
               <div className="income">
-                <h2>Total Income</h2>
+                <h2 className="total-header">Total Income</h2>
                 <p>
                   {dollar} {totalIncome()}
                 </p>
               </div>
               <div className="expense">
-                <h2>Total Expense</h2>
+                <h2 className="total-header">Total Expense</h2>
                 <p>
                   {dollar} {totalExpenses()}
                 </p>
@@ -99,6 +99,9 @@ const DashboardStyled = styled.div`
           grid-column: span 2;
           justify-content: center;
           align-items: center;
+          .total-header {
+            text-align: center;
+          }
         }
         .income,
         .expense,
@@ -108,11 +111,12 @@ const DashboardStyled = styled.div`
 
           box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.06);
           border-radius: 20px;
-          padding: 0.5rem;
+          padding: 0.3rem;
 
           p {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 700;
+            text-align: center;
           }
         }
 
@@ -125,7 +129,7 @@ const DashboardStyled = styled.div`
           p {
             color: var(--color-green);
             opacity: 0.6;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
           }
         }
       }

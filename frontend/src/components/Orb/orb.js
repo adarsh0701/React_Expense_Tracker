@@ -27,7 +27,7 @@ function Orb() {
       rgba(254, 253, 205, 1) 11.2%,
       rgba(163, 230, 255, 1) 91.1%
     );
-    filter: blur(100px);
+    filter: blur(30px);
     animation: ${moveOrb} 15s alternate linear infinite;
   `;
 
